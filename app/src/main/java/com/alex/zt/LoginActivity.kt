@@ -25,6 +25,8 @@ import java.util.ArrayList
 import android.Manifest.permission.READ_CONTACTS
 
 import kotlinx.android.synthetic.main.activity_login.*
+import retrofit2.Retrofit
+import retrofit2.converter.jackson.JacksonConverterFactory
 
 /**
  * A login screen that offers login via email/password.
@@ -243,6 +245,14 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 
         override fun doInBackground(vararg params: Void): Boolean? {
             // TODO: attempt authentication against a network service.
+
+
+//            var retrofit = Retrofit.Builder()
+//                    .addConverterFactory(JacksonConverterFactory.create())
+//                    .baseUrl("")
+//                    .build()
+//            retrofit.create()
+
 
             try {
                 // Simulate network access.
