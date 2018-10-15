@@ -25,6 +25,9 @@ import java.util.ArrayList
 import android.Manifest.permission.READ_CONTACTS
 
 import kotlinx.android.synthetic.main.activity_login.*
+import org.jetbrains.anko.longToast
+import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 import retrofit2.Retrofit
 import retrofit2.converter.jackson.JacksonConverterFactory
 
@@ -97,6 +100,12 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
      * errors are presented and no actual login attempt is made.
      */
     private fun attemptLogin() {
+
+//        toast("Hi there!")
+//        longToast("Wow, such duration")
+
+        startActivity<MainActivity>()
+
         if (mAuthTask != null) {
             return
         }
@@ -252,6 +261,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
 //                    .baseUrl("")
 //                    .build()
 //            retrofit.create()
+
 
 
             try {
