@@ -101,7 +101,7 @@ class LoginActivity : AppCompatActivity(), LoaderCallbacks<Cursor> {
      */
     private fun attemptLogin() {
 
-//        toast("Hi there!")
+        toast("Hi there!")
 //        longToast("Wow, such duration")
 
         startActivity<MainActivity>()
