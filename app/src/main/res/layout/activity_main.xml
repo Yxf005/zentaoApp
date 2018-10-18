@@ -25,7 +25,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text=""
+        android:text="@string/icon_compass"
         android:textColor="#f0f"
         android:textSize="100sp"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <icon name="compass">&#xe603;</icon>
-    <icon name="location">&#xe71e;</icon>
+    <string name="icon_compass" >&#xe602;</string>
 </resources>
