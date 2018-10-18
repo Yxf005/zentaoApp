@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+
     defaultConfig {
         applicationId "com.alex.zt"
         minSdkVersion 21
@@ -30,7 +32,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildToolsVersion '27.0.3'
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
+    }
+}
+
+androidExtensions {
+    experimental = true
 }
 
 dependencies {
@@ -39,10 +48,18 @@ dependencies {
     // 网络通信
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-jackson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 
+    // 异步框架
+    compile 'io.reactivex:rxandroid:2.1.0'
+    compile 'io.reactivex:rxkotlin:2.3.0'
+
+    // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
 
+    // 图片框架
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:design:26.1.0'
